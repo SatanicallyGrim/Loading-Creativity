@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour
 {
     #region Variables
     [SerializeField]
-    private float p1Speed = 3f;
+    //private float p1Speed = 3f;
     public float jmpHeight = 3f;
     private bool p1jumping = false;
     private Rigidbody2D rb;
@@ -25,8 +25,8 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Moves and object to the right multiplied by the player's move speed
-        transform.Translate(Vector2.right * Time.deltaTime * p1Speed);
+        // Moves and object to the right multiplied by the player's move speed (Changed it so the background moves instead of the player allowing for the illusion of movement)
+        //transform.Translate(Vector2.right * Time.deltaTime * p1Speed);
 
         if (Input.GetKeyDown(KeyCode.Space) && p1jumping == false)
         {
