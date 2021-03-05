@@ -7,8 +7,10 @@ public class Movement : MonoBehaviour
     #region Variables
     [SerializeField]
     //private float p1Speed = 3f;
+    [Header("Jump Variables")]
     public float jmpHeight = 3f;
     private bool p1jumping = false;
+    [Space]
     private Rigidbody2D rb;
     #endregion
     private void Awake()
