@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[AddComponentMenu("Environment/Repeating Grounds")]
 public class LoopedGround : MonoBehaviour
 {
     #region Variables
