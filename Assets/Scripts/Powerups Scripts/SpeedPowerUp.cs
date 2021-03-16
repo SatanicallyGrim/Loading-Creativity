@@ -13,6 +13,9 @@ public class SpeedPowerUp : MonoBehaviour
     public float multiplier = 5f;
     public float pUpMoveSpeed = 5f;
     public float powerUpDuration = 5f;
+    [Header("Effects")]
+    public GameObject fireEffect1;
+    public GameObject fireEffect2;
     #endregion
     // Start is called before the first frame update
     void Start()
@@ -25,17 +28,23 @@ public class SpeedPowerUp : MonoBehaviour
     {
         //Moves Object to the left multiplied by a speed variable 
         transform.Translate(Vector2.left * Time.deltaTime * pUpMoveSpeed);
+
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
             StartCoroutine(Collect(collision));
+            
         }
+
     }
     // IEnumerator used in order to allow for a Coroutine 
     public IEnumerator Collect(Collider2D player)
     {
+        //turns on the animation effect
+        fireEffect1.SetActive(true);
+        fireEffect2.SetActive(true);
         // Multiplies the speed by the powerup multiplier for both objects 
         loop1.speed *= multiplier;
         loop2.speed *= multiplier;
@@ -47,6 +56,9 @@ public class SpeedPowerUp : MonoBehaviour
         //Removes the effect of the powerup by dividing the by out muliplier to get the base stats
         loop1.speed /= multiplier;
         loop2.speed /= multiplier;
+        //turns off the animation effect
+        fireEffect1.SetActive(false);
+        fireEffect2.SetActive(false);
         //Destroys the powerup/Removes from Scene
         Destroy(gameObject);
     }
