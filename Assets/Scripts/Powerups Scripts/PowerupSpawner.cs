@@ -23,7 +23,8 @@ public class PowerupSpawner : MonoBehaviour
     {
         while (spawnable)
         {
-
+            powerUp.GetComponent<SpriteRenderer>().enabled = true;
+            powerUp.GetComponent<Collider2D>().enabled = true;
             SpawnItem();
             Debug.Log("Object has been dropped");
             yield return new WaitForSeconds(spawnTime);

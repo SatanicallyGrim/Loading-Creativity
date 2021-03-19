@@ -259,7 +259,7 @@ Transform:
   - {fileID: 846168483}
   - {fileID: 1101306611}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!1 &547012023
 GameObject:
@@ -1555,6 +1555,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1414749228 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6492414173988138960, guid: 10812a70737e6f843b68a44ca1be3fa7, type: 3}
+  m_PrefabInstance: {fileID: 1957430867}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1555549974
 GameObject:
   m_ObjectHideFlags: 0
@@ -1882,6 +1887,52 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &1840827153
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1840827155}
+  - component: {fileID: 1840827154}
+  m_Layer: 0
+  m_Name: Powerup Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1840827154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840827153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc804310bd0d34648b423b1723b661d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  powerUp: {fileID: 1414749228}
+  spawnable: 1
+  spawnTime: 15
+--- !u!4 &1840827155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840827153}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 25.57, y: 0.97, z: -3.128563}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1957430867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1892,6 +1943,10 @@ PrefabInstance:
     - target: {fileID: 6492414173988138960, guid: 10812a70737e6f843b68a44ca1be3fa7, type: 3}
       propertyPath: m_Name
       value: Powerup (Speed)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6492414173988138960, guid: 10812a70737e6f843b68a44ca1be3fa7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6492414173988138963, guid: 10812a70737e6f843b68a44ca1be3fa7, type: 3}
       propertyPath: loop1
@@ -1911,15 +1966,15 @@ PrefabInstance:
       objectReference: {fileID: 846168482}
     - target: {fileID: 6492414173988138972, guid: 10812a70737e6f843b68a44ca1be3fa7, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6492414173988138972, guid: 10812a70737e6f843b68a44ca1be3fa7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 24.97
+      value: -8.57
       objectReference: {fileID: 0}
     - target: {fileID: 6492414173988138972, guid: 10812a70737e6f843b68a44ca1be3fa7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.87
+      value: -1.2
       objectReference: {fileID: 0}
     - target: {fileID: 6492414173988138972, guid: 10812a70737e6f843b68a44ca1be3fa7, type: 3}
       propertyPath: m_LocalPosition.z
