@@ -17,6 +17,12 @@ public class DistanceScoreNick : MonoBehaviour
 
     private void Start()
     {
+        // This stops NullExceptionError: object reference not set to an instance of an object
+        // I don't understand why these text objects need to be 'found' since they are being assigned in this script
+        scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
+        highScore = GameObject.Find("HighScore").GetComponent<Text>();
+        highScore2 = GameObject.Find("HighScore").GetComponent<Text>();
+
         // initial amount of points
         // initial amount of points increase per second
         pointsAmount = 0f;
@@ -35,6 +41,8 @@ public class DistanceScoreNick : MonoBehaviour
         // ToString converts player position from float to string
         // "0" allows only whole numbers to be shown
         scoreText.text = pointsAmount.ToString("0");
+
+        // # of points equals # of points plus points added per second multiplied by number of seconds before the last frame
         pointsAmount += pointsIncreasedPerSecond * Time.deltaTime;
 
         // If amount of points is greater than high score

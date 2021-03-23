@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [AddComponentMenu("Environment/Repeating Grounds")]
 public class LoopedGround : MonoBehaviour
@@ -22,4 +23,6 @@ public class LoopedGround : MonoBehaviour
             transform.position = pos;
         }
     }
+
+
 }
