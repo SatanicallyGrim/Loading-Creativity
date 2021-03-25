@@ -59,7 +59,7 @@ public class SpeedPowerUp : MonoBehaviour
         //turns off the animation effect
         fireEffect1.SetActive(false);
         fireEffect2.SetActive(false);
-        //Destroys the powerup/Removes from Scene
-        Destroy(gameObject);
+        //Destroys the powerup/Removes from Scene after 20 due to an issue where it will stop it from instantiating 
+        Destroy(gameObject , 20);
     }
 }
