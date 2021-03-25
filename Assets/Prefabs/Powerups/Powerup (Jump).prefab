@@ -113,5 +113,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pUpMoveSpeed: 3
-  multiplier: 1.5
+  multiplier: 1.75
   powerUpDuration: 10
