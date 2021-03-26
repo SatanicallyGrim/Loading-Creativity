@@ -5,8 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Obstacle : MonoBehaviour
 {
-    private ObstacleGenerator obstacle;
-    private float moveSpeed = 5f;
+    private float moveSpeed = 7.5f;
     // Start is called before the first frame update
     void Start()
     {
