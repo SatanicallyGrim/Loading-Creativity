@@ -21,7 +21,7 @@ public class DistanceScoreNick : MonoBehaviour
         // I don't understand why these text objects need to be 'found' since they are being assigned in this script
         scoreText = GameObject.Find("ScoreText").GetComponent<Text>();
         highScore = GameObject.Find("HighScore").GetComponent<Text>();
-        highScore2 = GameObject.Find("HighScore").GetComponent<Text>();
+        
 
         // initial amount of points
         // initial amount of points increase per second
