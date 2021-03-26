@@ -11,7 +11,7 @@ public class DestroyZone : MonoBehaviour
     //Destroys the gameobject after 15 Seconds
     IEnumerator DestroyObject()
     {
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(45);
         Destroy(gameObject);
     }
 }
