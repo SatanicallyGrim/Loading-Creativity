@@ -20,13 +20,31 @@ public class ObstacleGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        StartCoroutine(RepeatSpawn());
     }
 
     // Update is called once per frame  
     void Update()
     {
+        
         if (transform.position.x < generationPoint.position.x)
+        {
+            distanceBetween = Random.Range(distanceBetweenMin, distanceBetweenMax);
+
+            float distanceBetweenY = Random.Range(distanceBetweenMinY, distanceBetweenMaxY);
+
+
+            transform.position = new Vector3(transform.position.x + platformWidth + distanceBetween, -2.5f + distanceBetweenY, transform.position.z);
+
+            int value = Random.Range(0, obstacles.Length);
+
+            Instantiate(obstacles[value] , transform.position, transform.rotation);
+        }
+
+    }
+    private IEnumerator RepeatSpawn()
+    {
+        while (true)
         {
             distanceBetween = Random.Range(distanceBetweenMin, distanceBetweenMax);
 
@@ -37,8 +55,9 @@ public class ObstacleGenerator : MonoBehaviour
 
             int value = Random.Range(0, obstacles.Length);
 
-            Instantiate(obstacles[value] , transform.position, transform.rotation);
-        }
+            Instantiate(obstacles[value], transform.position, transform.rotation);
+            yield return new WaitForSeconds(2);
 
+        }
     }
 }
